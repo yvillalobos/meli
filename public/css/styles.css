@@ -1,0 +1,538 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #F1FAFF;
+}
+
+img {
+    width: 100%;
+}
+
+/*==================================================
+    Cabecera y logo
+==================================================*/
+
+.main-header {
+    background-color: var(--amarillo);
+    /* rellenos a los costados */
+    padding: 20px;
+}
+
+
+
+.main-header-logo-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.main-logo {
+    width: 50%;
+}
+.main-search {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+
+.search-bar-input {
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar-input input{
+    width: 70%;
+}
+
+.search-bar input, button {
+    height: 20px;
+}
+
+.search-bar input {
+    border-radius: 5px 0px 0px 5px;
+    border: none;
+}
+
+.search-bar button {
+    border-radius: 0px 5px 5px 0px;
+    border: none;
+    background: var(--blanco);
+    cursor: pointer;
+}
+
+.copy-header {
+    font-weight: 400;
+    text-align: center;
+}
+
+/*==================================================
+    Menu hamburguesa
+==================================================*/
+
+.hamburguer-button {
+    background-color: var(--azul);
+    color: var(--blanco);
+    /* ponemos en bloque el elemento para que quede debajo */
+    display: block;
+    /* le damos un maximo de ancho para que no ocupe todo el width */
+    max-width: 50px;
+    padding: 15px 0;
+    border-radius: 8px;
+    /* centramos el icono */
+    text-align: center;
+    font-size: 18px;
+    /* centramos el box */
+    margin: auto;
+
+}
+
+/*==================================================
+    Menu navegavión
+==================================================*/
+
+.main-navbar {
+    display: none;
+}
+
+.main-navbar ul {
+    /* sacando las viñetas de la lista */
+    list-style: none;
+    /* se utiliza para eliminar los espacios en las listas */
+    margin: 0;
+    padding: 0;
+    /* ---------------------------------------------------- */
+}
+
+.main-navbar a {
+    text-decoration: none;
+    color: #222222;
+    display: inline-block;
+    padding: 5px 0;
+    font-size: 17px;
+}
+
+/*==================================================
+    Banner
+==================================================*/
+
+.banner {
+    display: flex;
+    max-width: 100%;
+}
+.banner img {
+    max-width: 100%;
+}
+
+/*==================================================
+    Productos
+==================================================*/
+
+main {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+main h2 {
+    font-size: 24px;
+}
+
+.box-price-dicount {
+    position: relative;
+}
+
+main section article i {
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--verde);
+    background-color: var(--blanco);
+    color: var(--verde);
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+
+.box-price-dicount {
+    padding: 15px;
+}
+
+main .main-price {
+    font-size: 18px;
+}
+
+main .main-discount, h3 {
+    font-size: 16px;
+    margin: 0;
+}
+
+main .main-discount {
+    color: var(--verde);
+}
+
+main h3 {
+    color: var(--grisOscuro);
+    margin: 20px 0 0 0;
+}
+
+main img {
+    max-width: 90%;
+}
+
+.imagen-producto {
+    border-bottom: solid 1px var(--grisClaro);
+}
+
+.main-product {
+    background-color: var(--blanco);
+}
+
+.precio_oferta {
+    display: flex;
+    flex-grow: row;
+}
+
+.main-price {
+    width: 30%;
+}
+
+.main-discount {
+    width: 70%;
+}
+
+.truck {
+    transform: rotate(0deg);
+    transform: rotateY(180deg);
+    transition: all 0.4s ease-in;
+}
+
+.main-product:hover .truck {
+    transform: translate(-340px);
+}
+
+.main-product {
+    max-width: 100%;
+    margin: 10px;
+    transition: all 0.4s ease-in;
+}
+
+.main-product:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+main article {
+    margin-bottom: 10px;
+}
+
+/*==================================================
+    Footer
+==================================================*/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+}
+footer h3, p {
+    margin: 0;
+    padding: 0;
+}
+footer section {
+    color: var(--grisOscuro);
+    padding: 15px;
+}
+footer .body-pie {
+    font-size: 12px;
+}
+
+footer .icon-footer {
+    font-size: 2em;
+    color: var(--celeste);
+    transition: all 0.4s ease-in;
+}
+
+footer .icon-footer:hover {
+    color: var(--amarillo);
+    transform: rotateY(180deg);
+    transition: all 0.4s ease-in;
+}
+
+footer .pie-footer {
+    text-align-last: left;
+    margin-top: 10px;
+}
+
+/*==================================================
+    PUNTO DE QUIEBRE
+==================================================*/
+
+/* ++++++ 481 ++++++ */
+@media (min-width: 481px) {
+
+    .main-header-top-bar {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+
+    .main-header-logo-bar {
+        width: 52%;
+    }
+
+    .main-search {
+        width: 48%;
+    }
+
+    .main-tarjeta {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 48%;
+    }
+    
+    .copy-header {
+        margin: 0;
+        text-align: right;
+        font-size: 16px;
+    }
+
+    .search-bar {
+        margin: auto;
+        margin-right: 0;
+        /* border: 1px solid brown; */
+    }
+
+    .search-bar input {
+        width: 100%;
+        height: 30px;
+    }
+
+    .search-bar button {
+        height: 30px;
+    }
+
+    .hamburguer-button {
+        display: none;
+    }
+
+    .main-navbar {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .main-navbar ul {
+        display: flex;
+    }
+
+    .main-navbar li {
+        margin: 0 5px;
+    }
+
+    main h2 {
+        margin-left: 10px;
+    }
+
+    section {
+        display: flex;
+        width: 100%;
+    }
+
+    main img {
+        max-width: 100%;
+    }
+    
+    .main-price {
+        width: 40%;
+    }
+    
+    .main-discount {
+        width: 60%;
+    }
+
+    .box-price-dicount h3 {
+        position: relative;
+        bottom: 40px;
+        z-index: -1;
+        opacity: 0;
+        transition: all 0.4s ease-in;
+    }
+
+    .box-price-dicount {
+        height: 50px;
+        transition: all 0.4s ease-in;
+    }
+
+    .main-product:hover .box-price-dicount h3{
+        position: relative;
+        bottom: 15px;
+        z-index: 1;
+        opacity: 1;
+    }
+
+    .main-product:hover .box-price-dicount {
+        height: 80px;
+    }
+
+    .main-product:hover .truck {
+        transform: translate(-295px);
+    }
+
+    footer div {
+        display: flex;
+    }
+    footer div section {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+/* +++++ 768 +++++ */
+@media (min-width: 769px) {
+
+    .main-header-top-bar {
+        align-items: center;
+    }
+
+    .search-bar {
+        margin: auto;
+        width: 80%;
+        margin-right: 0;
+    }
+
+    .search-bar input {
+        width: 100%;
+        height: 40px;
+    }
+
+    .search-bar button {
+        height: 40px;
+    }
+
+    .copy-header {
+        max-width: none;
+        font-size: 22px;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    .main-navbar {
+        margin-top: 40px;
+    }
+
+    .main-navbar li {
+        margin: 0 10px;
+    }
+
+    .main-navbar a {
+        font-size: 19px;
+    }
+
+    .banner img {
+        width: 100%;
+    }
+
+    .imagen-producto {
+        display: flex;
+        justify-content:center;
+    }
+    
+    .imagen-producto img {
+        justify-content: center;
+    }
+
+    .box-price-dicount h3 {
+        position: relative;
+        bottom: 40px;
+        z-index: -1;
+        opacity: 0;
+        transition: all 0.4s ease-in;
+    }
+
+    .box-price-dicount {
+        height: 50px;
+        transition: all 0.4s ease-in;
+    }
+
+    .main-product:hover .box-price-dicount h3{
+        position: relative;
+        bottom: 15px;
+        z-index: 1;
+        opacity: 1;
+    }
+
+    .main-product:hover .box-price-dicount {
+        height: 80px;
+    }
+
+    .main-product {
+        height: 330px;
+        transition: all 0.4s ease-in;
+    }
+
+    .main-product:hover {
+        height: 370px;
+    }
+
+    .main-price {
+        width: 50%;
+    }
+    
+    .main-discount {
+        width: 50%;
+    }
+
+    .main-product:hover .truck {
+        transform: translate(-170px);
+    }
+
+
+    section {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .article-tablet {
+        display: flex;
+    }
+}
+
+@media (min-width: 1023px) {
+    .main-product {
+        height: 280px;
+        transition: all 0.4s ease-in;
+    }
+
+    .main-product:hover {
+        height: 310px;
+    }
+
+    .main-product:hover .truck {
+        transform: translate(-175px);
+    }
+}
+
+@media (min-width: 1200px) {
+    .main-product {
+        height: 360px;
+        transition: all 0.4s ease-in;
+    }
+
+    .main-product:hover {
+        height: 390px;
+    }
+
+    .main-product:hover .truck {
+        transform: translate(-255px);
+    }
+}
